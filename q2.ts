@@ -1,9 +1,19 @@
+// ปุญณพัฒน์ ภาณุมนต์วาที 640610692
+
 // define interface for Student object
 /* Your code here */
+interface Student {
+  name: string;
+  score: number;
+}
 
 // assign interface/type to the function definition properly
-function findTopNames(students) {
+function findTopNames(students:Student[]) {
   /* Your code here */
+  const pass = students
+  .filter((std) => std.score > 8)
+  .map((std) =>std.name);
+  return pass;
 }
 
 // assign interface/type to the student1 object properly
